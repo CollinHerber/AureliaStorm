@@ -1,7 +1,7 @@
 <idea-plugin>
     <name>AureliaStorm Community</name>
     <id>AureliaStormCommunity</id>
-    <idea-version since-build="191.3684" until-build="201.0000"/>
+    <idea-version since-build="232" until-build="232.*"/>
     <vendor email="rustaddicts@gmail.com" url="https://github.com/CollinHerber/AureliaStorm">Collin Herber</vendor>
     <description><![CDATA[
         This plugin is a fork from <a href="https://plugins.jetbrains.com/plugin/8567-aureliastorm">AureliaStorm</a>
