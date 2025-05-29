@@ -1,0 +1,6 @@
+{
+  "name": "test",
+  "dependencies": {
+    "aurelia-framework": "1.0.0"
+  }
+}

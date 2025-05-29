@@ -29,5 +29,5 @@ dependencies {
 patchPluginXml {
   sinceBuild = "242.0"
   untilBuild = "251.*"
-  pluginVersion = "1.4.0"
+  pluginVersion = "2.0.0"
 }
