@@ -1,29 +1,12 @@
 <idea-plugin>
     <name>AureliaStorm Community</name>
     <id>AureliaStormCommunity</id>
-    <idea-version since-build="232.0" until-build="241.*"/>
     <vendor email="rustaddicts@gmail.com" url="https://github.com/CollinHerber/AureliaStorm">Collin Herber</vendor>
-    <description><![CDATA[
-        This plugin is a fork from <a href="https://plugins.jetbrains.com/plugin/8567-aureliastorm">AureliaStorm</a>
-        This plugin brings support for <a href="https://aurelia.io/">Aurelia</a> framework to the IntelliJ platform
-        Features:
-        <ul>
-         <li>Supports Aurelia 1 and 2</li>
-         <li>Code insight for specific Aurelia attributes (such as <code>*.bind</code> or <code>*.trigger</code>)</li>
-         <li>Syntax highlighting in <code>${}</code> interpolations</li>
-         <li>Controller properties completion and navigation</li>
-        </ul>
-        Either aurelia or aurelia-cli must be included as a dependency in package.json.
-    ]]></description>
+
     <depends>com.intellij.modules.lang</depends>
     <depends>JavaScript</depends>
-    <depends>NodeJS</depends>
     <depends>com.intellij.modules.xml</depends>
-    <change-notes>
-        <![CDATA[
-            <a href="https://github.com/CollinHerber/AureliaStorm/blob/master/CHANGELOG.md">Changelog</a>
-        ]]>
-    </change-notes>
+
     <extensions defaultExtensionNs="com.intellij">
         <xml.xmlSuppressionProvider implementation="com.github.denofevil.aurelia.HtmlXmlSuppressionProvider" />
         <multiHostInjector implementation="com.github.denofevil.aurelia.inject.Injector" />
