@@ -1,18 +1,23 @@
-# AureliaStorm Community
-
-![Build](https://github.com/CollinHerber/AureliaStorm/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/21949-aureliastorm-community.svg)](https://plugins.jetbrains.com/plugin/21949-aureliastorm-community)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/21949-aureliastorm-community.svg)](https://plugins.jetbrains.com/plugin/21949-aureliastorm-community)
+<div align="center">
+    <h1>AureliaStorm Community</h1>
+    <img alt="GitHub Workflow Status" src="https://github.com/CollinHerber/AureliaStorm/workflows/Build/badge.svg">
+    <a href="https://plugins.jetbrains.com/plugin/21949-aureliastorm-community" ><img alt="Build" src="https://img.shields.io/jetbrains/plugin/v/21949-aureliastorm-community.svg"/></a>
+    <a href="https://plugins.jetbrains.com/plugin/21949-aureliastorm-community"><img alt="Downloads" src="https://img.shields.io/jetbrains/plugin/d/21949-aureliastorm-community.svg"></a>
+    <a href="https://github.com/CollinHerber/AureliaStorm"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/CollinHerber/AureliaStorm"></a>
+</div>
 
 <!-- Plugin description -->
 
 This plugin brings improved support for [Aurelia Framework](https://aurelia.io) to
 the [IntelliJ platform](https://www.jetbrains.com/products.html?fromMenu#lang=js&type=ide)
 
-Plugin Supports Aurelia 1.x and 2.x
+> Plugin Supports Aurelia 1.x and 2.x
 
-Either aurelia (v2), or aurelia-cli (v1) must be present in the project npm dependencies
-![](./plugin-demo.gif)
+![](https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif)
+
+[Report an issue](https://github.com/CollinHerber/AureliaStorm/issues) | [GitHub](https://github.com/CollinHerber/AureliaStorm) | [JetBrains](https://plugins.jetbrains.com/plugin/21949-aureliastorm-community)
+
+Either `aurelia`(v2) or `aurelia-cli`,`aurelia-framework`(v1) must be present in the project npm dependencies
 
 ### Custom elements & attributes
 
@@ -32,10 +37,6 @@ Either aurelia (v2), or aurelia-cli (v1) must be present in the project npm depe
 * Controller properties completion and navigation
 * `$this`, `$parent`, `$index`, `$event` support
 
-### Prerequisites
-
-Either `aurelia`, `aurelia-cli` or `aurelia-framework` must be present in `package.json`
-
 <!-- Plugin description end -->
 
 ## Contributing
@@ -43,4 +44,4 @@ Either `aurelia`, `aurelia-cli` or `aurelia-framework` must be present in `packa
 You can run the plugin using the [Run Plugin](/.run/Run%20Plugin.run.xml) configuration. This will launch an instance of intellij with the
 plugin loaded (for more information check out the IntelliJ Template).
 
-> this project is based on the [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+> This project is based on the [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
