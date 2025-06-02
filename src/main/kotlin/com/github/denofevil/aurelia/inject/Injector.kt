@@ -25,6 +25,7 @@ import kotlin.math.min
  */
 class Injector : MultiHostInjector {
     private val injectBeforeAll = "var \$this;var \$parent;"
+    private val injectWithRepeatFor = "var \$index;var \$first;var \$last;var \$odd;var \$even;"
     override fun getLanguagesToInject(registrar: MultiHostRegistrar, host: PsiElement) {
         if (!AureliaSettings.getInstance().jsInjectionEnabled) return
         if (!Aurelia.isPresentFor(host.project)) return
@@ -46,7 +47,7 @@ class Injector : MultiHostInjector {
                     var before: String? = injectBeforeAll
                     if (InjectionUtils.findParentRepeatForTag(host) != null) {
                         // events have a $event parameter
-                        before += "var \$index;var \$first;var \$last;var \$odd;var \$even;"
+                        before += injectWithRepeatFor
                     }
                     if (Aurelia.EVENT_BINDINGS.contains(attr)) {
                         // events have a $event parameter
@@ -69,7 +70,8 @@ class Injector : MultiHostInjector {
         injectInXmlTextByDelimiters(registrar, host)
     }
 
-    private fun injectInXmlTextByDelimiters(registrar: MultiHostRegistrar, context: PsiElement, start: String = "\${", end: String = "}") {
+    private fun injectInXmlTextByDelimiters(registrar: MultiHostRegistrar, context: PsiElement) {
+        val start = "\${"
         if (context.textContains(start[0])) {
             val text: String = context.text
             var previousSearchStart = -1
@@ -83,7 +85,7 @@ class Injector : MultiHostInjector {
                 }
 
                 startIdx += start.length
-                var endIndex = findMatchingEnd(start, end, text, startIdx)
+                var endIndex = findMatchingEnd("{", "}", text, startIdx)
                 endIndex = if (endIndex > 0) endIndex else ElementManipulators.getValueTextRange(context).endOffset
                 searchStart = max((endIndex + 1).toDouble(), startIdx.toDouble()).toInt()
                 if (startIdx < endIndex) {
@@ -100,7 +102,7 @@ class Injector : MultiHostInjector {
                         var before: String? = injectBeforeAll
                         if (InjectionUtils.findParentRepeatForTag(context) != null) {
                             // events have a $event parameter
-                            before += "var \$index;"
+                            before += injectWithRepeatFor
                         }
                         val range = rangeWithoutBindingBehaviours(text.substring(startIdx, endIndex), TextRange(startIdx, endIndex))
                         registrar.startInjecting(JavascriptLanguage)

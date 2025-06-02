@@ -7,14 +7,17 @@
     <a href="https://github.com/CollinHerber/AureliaStorm"><img alt="Stars" src="https://img.shields.io/github/stars/CollinHerber/AureliaStorm"></a>
 </div>
 
-<!-- Plugin description -->
+<br>
 
-![](https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif)
+<!-- Plugin description -->
 
 This plugin brings improved support for [Aurelia Framework](https://aurelia.io) to
 the [IntelliJ platform](https://www.jetbrains.com/products.html?fromMenu#lang=js&type=ide)
 
 > Plugin Supports Aurelia 1.x and 2.x
+
+![](https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif)
+
 
 [Report an issue](https://github.com/CollinHerber/AureliaStorm/issues) | [GitHub](https://github.com/CollinHerber/AureliaStorm) | [JetBrains](https://plugins.jetbrains.com/plugin/21949-aureliastorm-community)
 
