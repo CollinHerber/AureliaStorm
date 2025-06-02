@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Update readme and changelog
+
 ## [2.0.0] - 2025-05-29
 
 A huge thank you to the efforts done by Readock on Github and the work done to https://plugins.jetbrains.com/plugin/27000-aureliastorm-re
