@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.0.1] - 2025-06-02
+
 ### Changed
 
 - Update readme and changelog
@@ -45,6 +47,7 @@ This release is a combination of the work done by Readock and the community cont
 - Adds support for 2025.1
 
 ## [1.3.3] - 4/9/2025
+
 - Now uses the PackageJsonData class from com.intellij to determine dependencies which is much more performant than a direct PSI,
 - Updates kotlin version,
 - Updates to Gradle v2 version for intellij,
@@ -69,20 +72,14 @@ This release is a combination of the work done by Readock and the community cont
 - Remove deprecated getDependencies Call
 - Remove deprecated getBaseDir call
 
-[Unreleased]: https://github.com/Readock/AureliaStormRe/compare/v2.3.1...HEAD
-
+[Unreleased]: https://github.com/CollinHerber/AureliaStorm/compare/v2.0.1...HEAD
 [2.3.1]: https://github.com/Readock/AureliaStormRe/compare/v2.3.0...v2.3.1
-
 [2.3.0]: https://github.com/Readock/AureliaStormRe/compare/v2.2.0...v2.3.0
-
 [2.2.0]: https://github.com/Readock/AureliaStormRe/compare/v2.1.0...v2.2.0
-
 [2.1.0]: https://github.com/Readock/AureliaStormRe/compare/v2.0.1...v2.1.0
-
-[2.0.1]: https://github.com/Readock/AureliaStormRe/compare/v2.0.0...v2.0.1
-
-[2.0.0]: https://github.com/Readock/AureliaStormRe/compare/v1.2.1...v2.0.0
-
-[1.2.1]: https://github.com/Readock/AureliaStormRe/compare/v1.2.0...v1.2.1
-
-[1.2.0]: https://github.com/Readock/AureliaStormRe/commits/v1.2.0
+[2.0.1]: https://github.com/CollinHerber/AureliaStorm/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/CollinHerber/AureliaStorm/compare/v1.4.0...v2.0.0
+[1.4.0]: https://github.com/CollinHerber/AureliaStorm/compare/v1.3.3...v1.4.0
+[1.3.3]: https://github.com/CollinHerber/AureliaStorm/compare/v1.2.1...v1.3.3
+[1.2.1]: https://github.com/CollinHerber/AureliaStorm/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/CollinHerber/AureliaStorm/commits/v1.2.0
