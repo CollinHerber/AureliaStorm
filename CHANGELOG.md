@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed usages of {} inside ${} would break the injection
+- Fixed $first $last $odd $even for ${} brackets
+
+## [2.0.1] - 2025-06-02
+
 ### Changed
 
 - Update readme and changelog
