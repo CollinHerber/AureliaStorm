@@ -12,27 +12,29 @@ body:
       required: true
 
   - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output or stack trace
-      description: |
-        Please copy and paste any relevant log output.
-        Add the full stack trace if available.
-        If possible, run the failing task with `--stacktrace` flag.
-        
-        *This will be automatically formatted into code, so there is no need for backticks.*
-      render: shell
-
-  - type: textarea
     id: steps
     attributes:
       label: Steps to reproduce
-      description: Steps to reproduce the behavior – provide your build configuration.
+      description: Steps to reproduce the behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context like a stack trace or screenshot about the issue here.
+
+  - type: input
+    id: ide
+    attributes:
+      label: IntelliJ version
+      placeholder: 2025.1 Ultimate
     validations:
       required: true
 
   - type: input
-    id: version
+    id: plugin
     attributes:
       label: Plugin version
       placeholder: 2.0.0
