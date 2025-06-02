@@ -1,4 +1,5 @@
-<div style="text-align:center">
+<!--suppress HtmlDeprecatedAttribute -->
+<div align="center">
     <h1>AureliaStorm Community</h1>
     <img alt="GitHub Workflow Status" src="https://github.com/CollinHerber/AureliaStorm/workflows/Build/badge.svg">
     <a href="https://plugins.jetbrains.com/plugin/21949-aureliastorm-community" ><img alt="Build" src="https://img.shields.io/jetbrains/plugin/v/21949-aureliastorm-community.svg"/></a>
