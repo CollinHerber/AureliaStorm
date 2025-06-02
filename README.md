@@ -1,19 +1,19 @@
-<div align="center">
+<div style="text-align:center">
     <h1>AureliaStorm Community</h1>
     <img alt="GitHub Workflow Status" src="https://github.com/CollinHerber/AureliaStorm/workflows/Build/badge.svg">
     <a href="https://plugins.jetbrains.com/plugin/21949-aureliastorm-community" ><img alt="Build" src="https://img.shields.io/jetbrains/plugin/v/21949-aureliastorm-community.svg"/></a>
     <a href="https://plugins.jetbrains.com/plugin/21949-aureliastorm-community"><img alt="Downloads" src="https://img.shields.io/jetbrains/plugin/d/21949-aureliastorm-community.svg"></a>
-    <a href="https://github.com/CollinHerber/AureliaStorm"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/CollinHerber/AureliaStorm"></a>
+    <a href="https://github.com/CollinHerber/AureliaStorm"><img alt="Stars" src="https://img.shields.io/github/stars/CollinHerber/AureliaStorm"></a>
 </div>
 
 <!-- Plugin description -->
+
+![](https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif)
 
 This plugin brings improved support for [Aurelia Framework](https://aurelia.io) to
 the [IntelliJ platform](https://www.jetbrains.com/products.html?fromMenu#lang=js&type=ide)
 
 > Plugin Supports Aurelia 1.x and 2.x
-
-![](https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif)
 
 [Report an issue](https://github.com/CollinHerber/AureliaStorm/issues) | [GitHub](https://github.com/CollinHerber/AureliaStorm) | [JetBrains](https://plugins.jetbrains.com/plugin/21949-aureliastorm-community)
 
