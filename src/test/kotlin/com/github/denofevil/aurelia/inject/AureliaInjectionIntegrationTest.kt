@@ -5,6 +5,7 @@ import com.intellij.ide.highlighter.HtmlFileType
 import com.intellij.lang.injection.InjectedLanguageManager
 import com.intellij.lang.javascript.psi.JSExpression
 import com.intellij.lang.javascript.psi.JSReferenceExpression
+import com.intellij.lang.javascript.psi.impl.JSObjectLiteralExpressionImpl
 import com.intellij.psi.PsiFile
 import com.intellij.psi.util.PsiTreeUtil
 import com.intellij.psi.xml.XmlFile
@@ -64,6 +65,29 @@ class AureliaInjectionIntegrationTest : BasePlatformTestCase() {
 
         TestCase.assertNotNull(reference)
         TestCase.assertTrue(InjectionUtils.isAureliaInjected(reference!!))
+    }
+
+    fun testShouldInjectNestedExpression() {
+        myFixture.copyFileToProject("package.json")
+        myFixture.copyFileToProject("annotation-custom-element.ts", "annotation-custom-element.ts")
+        AureliaSettings.getInstance().jsInjectionEnabled = true
+        val psiFile = myFixture.configureByText(
+            HtmlFileType.INSTANCE, "<template>\${var test = { obj:{}, text:'test'}}</template>"
+        )
+        val htmlFile = assertInstanceOf(psiFile, XmlFile::class.java)
+
+        val tag: XmlTag = htmlFile.rootTag!!
+        val value: XmlText = PsiTreeUtil.findChildOfType(tag, XmlText::class.java)!!
+        val injectedPsi = InjectedLanguageManager.getInstance(tag.project)
+            .getInjectedPsiFiles(value)
+            ?.firstOrNull()
+            ?.first as? PsiFile
+        val reference = PsiTreeUtil.findChildOfType(injectedPsi, JSExpression::class.java) as JSObjectLiteralExpressionImpl
+
+        TestCase.assertNotNull(reference)
+        TestCase.assertNotNull(reference.findProperty("obj"))
+        TestCase.assertNotNull(reference.findProperty("text"))
+        TestCase.assertTrue(InjectionUtils.isAureliaInjected(reference))
     }
 
     fun testShouldResolveRepeatForVariableReference() {
