@@ -6,6 +6,7 @@
 
 - Fixed usages of {} inside ${} would break the injection
 - Fixed $first $last $odd $even for ${} brackets
+- Fixed adding semicolon to html injected code when formating 
 
 ## [2.0.1] - 2025-06-02
 

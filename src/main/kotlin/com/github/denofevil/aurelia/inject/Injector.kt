@@ -60,7 +60,7 @@ class Injector : MultiHostInjector {
                     if (name.endsWith(".$attr")) {
                         val trimmedRange = rangeWithoutBindingBehaviours(host.text, range)
                         registrar.startInjecting(JavascriptLanguage)
-                            .addPlace(before, null, host as PsiLanguageInjectionHost, trimmedRange)
+                            .addPlace(before, ";", host as PsiLanguageInjectionHost, trimmedRange)
                             .doneInjecting()
                         return
                     }
@@ -106,7 +106,7 @@ class Injector : MultiHostInjector {
                         }
                         val range = rangeWithoutBindingBehaviours(text.substring(startIdx, endIndex), TextRange(startIdx, endIndex))
                         registrar.startInjecting(JavascriptLanguage)
-                            .addPlace(before, null, context as PsiLanguageInjectionHost, range)
+                            .addPlace(before, ";", context as PsiLanguageInjectionHost, range)
                             .doneInjecting()
                     }
                 }
