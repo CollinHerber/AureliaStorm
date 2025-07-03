@@ -25,6 +25,7 @@ class AureliaCompletionIntegrationTest : BasePlatformTestCase() {
         TestCase.assertEquals(0, variants.count { it.lookupString == "private-property" })
         TestCase.assertEquals(1, variants.count { it.lookupString == "public-property-with-binding" })
         TestCase.assertEquals(1, variants.count { it.lookupString == "private-property-with-binding" })
+        TestCase.assertEquals(1, variants.count { it.lookupString == "inherited-property-with-binding" })
     }
 
     fun testShouldNotCompleteCustomElementAttributeWithoutAurelia() {

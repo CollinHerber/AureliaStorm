@@ -2,12 +2,15 @@
 
 ## [Unreleased]
 
+### Added
+- Support for inherited custom element properties
+
 ## [2.0.2] - 2025-07-01
 
 ### Fixed
 
-- Fixed usages of {} inside ${} would break the injection
-- Fixed $first $last $odd $even for ${} brackets
+- Fixed usages of `{}` inside `${}` would break the injection
+- Fixed `$first` `$last` `$odd` `$even` for `${}` brackets
 - Fixed adding semicolon to html injected code when formating
 
 ## [2.0.1] - 2025-06-02

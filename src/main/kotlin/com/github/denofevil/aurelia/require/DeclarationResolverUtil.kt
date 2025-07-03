@@ -1,6 +1,7 @@
 package com.github.denofevil.aurelia.require
 
 import com.github.denofevil.aurelia.Aurelia
+import com.github.denofevil.aurelia.AureliaClassUtil
 import com.github.denofevil.aurelia.config.AureliaSettings
 import com.github.denofevil.aurelia.index.AureliaIndexUtil
 import com.intellij.lang.javascript.psi.JSElement
@@ -68,7 +69,7 @@ object DeclarationResolverUtil {
 
     private fun resolveBindableAttributesImpl(jsClass: JSClass, onlyWithAnnotation: Boolean = true): List<PropertySignature> {
         val members = arrayListOf<PropertySignature>()
-        for (jsMember in jsClass.members) {
+        for (jsMember in AureliaClassUtil.getAllMembers(jsClass)) {
             val isWithoutAnnotation = !hasBindableAnnotation(jsMember)
             if (AureliaSettings.getInstance().checkPropertyBindableAnnotation && isWithoutAnnotation) continue
             if (onlyWithAnnotation && isWithoutAnnotation) continue

@@ -1,6 +1,7 @@
 package com.github.denofevil.aurelia.hook
 
 import com.github.denofevil.aurelia.Aurelia
+import com.github.denofevil.aurelia.AureliaClassUtil
 import com.intellij.lang.javascript.psi.JSElement
 import com.intellij.lang.javascript.psi.JSFunction
 import com.intellij.lang.javascript.psi.ecmal4.JSAttributeListOwner
@@ -23,7 +24,7 @@ object HookUtil {
     fun findChangeCallbackTarget(method: JSFunction): PsiElement? {
         if (method.name?.endsWith("Changed") != true) return null
         val methodClass = method.parent as? JSClass ?: return null
-        return methodClass.members.firstOrNull { hasObservableAnnotation(it) && it.name == method.name?.substringBeforeLast("Changed") }
+        return AureliaClassUtil.getAllMembers(methodClass).firstOrNull { hasObservableAnnotation(it) && it.name == method.name?.substringBeforeLast("Changed") }
     }
 
     private fun hasObservableAnnotation(member: JSElement): Boolean {
