@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+- Improved reference resolving for `${}` and binding attribute values
+- Improved code completions for controller members inside of `${}` and binding attribute values
+
 ## [2.0.3] - 2025-07-03
 
 ### Added

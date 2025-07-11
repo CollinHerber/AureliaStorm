@@ -14,14 +14,15 @@
         <xml.attributeDescriptorsProvider implementation="com.github.denofevil.aurelia.attribute.AureliaCustomAttributeDescriptorsProvider" order="first" />
         <xml.elementDescriptorProvider implementation="com.github.denofevil.aurelia.element.AureliaCustomElementDescriptorProvider" order="first" />
         <psi.referenceContributor language="HTML" implementation="com.github.denofevil.aurelia.require.AureliaRequireReferenceContributor" order="first" />
-        <psi.referenceContributor language="JavaScript" implementation="com.github.denofevil.aurelia.inject.AureliaRepeatForVariableReferenceContributor" order="first" />
+		<psi.referenceContributor language="JavaScript" implementation="com.github.denofevil.aurelia.inject.AureliaInjectionReferenceContributor" order="first" />
         <javascript.rename.extension implementation="com.github.denofevil.aurelia.RenameExtension" />
         <fileBasedIndex implementation="com.github.denofevil.aurelia.index.AureliaCustomElementIndex" />
         <fileBasedIndex implementation="com.github.denofevil.aurelia.index.AureliaCustomAttributeIndex" />
         <lang.inspectionSuppressor language="JavaScript" implementationClass="com.github.denofevil.aurelia.InspectionSuppressor" order="first" />
-        <completion.contributor language="HTML" implementationClass="com.github.denofevil.aurelia.completion.AureliaCompletionContributor" order="first" />
+		<completion.contributor language="HTML" implementationClass="com.github.denofevil.aurelia.completion.AureliaHTMLCompletionContributor" order="first" />
+		<completion.contributor language="JavaScript" implementationClass="com.github.denofevil.aurelia.completion.AureliaJSCompletionContributor" order="first" />
 
-        <codeInsight.lineMarkerProvider language="JavaScript" implementationClass="com.github.denofevil.aurelia.hook.AureliaHookLineMarkerProvider" />
+		<codeInsight.lineMarkerProvider language="JavaScript" implementationClass="com.github.denofevil.aurelia.hook.AureliaHookLineMarkerProvider" />
         <implicitUsageProvider implementation="com.github.denofevil.aurelia.hook.AureliaHookUsageProvider" />
 
 

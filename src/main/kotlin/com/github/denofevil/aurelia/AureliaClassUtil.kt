@@ -11,6 +11,11 @@ object AureliaClassUtil {
 
     private fun getAllMembers(jsClass: JSClass, processedClasses: ArrayList<JSClass>): List<JSElement> {
         processedClasses.add(jsClass) // to avoid endless loop
-        return jsClass.members + jsClass.superClasses.filter { !processedClasses.contains(it) }.flatMap { getAllMembers(it, processedClasses) }
+        return jsClass.members + jsClass.superClasses.filter { !processedClasses.contains(it) }
+            .flatMap { getAllMembers(it, processedClasses) }
+    }
+
+    fun getAllMembersByName(jsClass: JSClass, name: String): List<JSElement> {
+        return getAllMembers(jsClass).filter { it.name == name }
     }
 }

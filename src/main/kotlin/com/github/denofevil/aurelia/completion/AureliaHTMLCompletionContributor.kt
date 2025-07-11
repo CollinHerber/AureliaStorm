@@ -6,7 +6,7 @@ import com.intellij.patterns.PlatformPatterns
 import com.intellij.psi.xml.XmlAttribute
 import com.intellij.psi.xml.XmlElement
 
-class AureliaCompletionContributor : CompletionContributor() {
+class AureliaHTMLCompletionContributor : CompletionContributor() {
     init {
         extend(
             CompletionType.BASIC,
