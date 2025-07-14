@@ -2,7 +2,10 @@
 
 ## [Unreleased]
 
+## [2.1.0] - 2025-07-14
+
 ### Changed
+
 - Improved reference resolving for `${}` and binding attribute values
 - Improved code completions for controller members inside of `${}` and binding attribute values
 
@@ -90,11 +93,11 @@ This release is a combination of the work done by Readock and the community cont
 - Remove deprecated getDependencies Call
 - Remove deprecated getBaseDir call
 
-[Unreleased]: https://github.com/CollinHerber/AureliaStorm/compare/v2.0.3...HEAD
+[Unreleased]: https://github.com/CollinHerber/AureliaStorm/compare/v2.1.0...HEAD
 [2.3.1]: https://github.com/Readock/AureliaStormRe/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/Readock/AureliaStormRe/compare/v2.2.0...v2.3.0
 [2.2.0]: https://github.com/Readock/AureliaStormRe/compare/v2.1.0...v2.2.0
-[2.1.0]: https://github.com/Readock/AureliaStormRe/compare/v2.0.1...v2.1.0
+[2.1.0]: https://github.com/CollinHerber/AureliaStorm/compare/v2.0.3...v2.1.0
 [2.0.3]: https://github.com/CollinHerber/AureliaStorm/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/CollinHerber/AureliaStorm/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/CollinHerber/AureliaStorm/compare/v2.0.0...v2.0.1
