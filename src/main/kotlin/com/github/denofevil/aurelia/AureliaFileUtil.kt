@@ -16,7 +16,7 @@ object AureliaFileUtil {
         val controllerFile = directory.findFile("$name.ts") ?: directory.findFile("$name.js")
         val candidates = PsiTreeUtil.findChildrenOfType(controllerFile, JSClass::class.java)
         candidates.firstOrNull{ AureliaIndexUtil.isCustomElementClass(it) }?.let { return it }
-        candidates.firstOrNull{ it.isExported }?.let { return it }
+        candidates.firstOrNull{ it.isExported && !it.isInterface }?.let { return it }
         return candidates.firstOrNull()
     }
 
