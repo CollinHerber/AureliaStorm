@@ -1,5 +1,6 @@
 package com.github.denofevil.aurelia
 
+import com.github.denofevil.aurelia.index.AureliaIndexUtil
 import com.intellij.lang.javascript.psi.ecmal4.JSClass
 import com.intellij.openapi.util.io.FileUtil
 import com.intellij.psi.PsiFile
@@ -13,7 +14,10 @@ object AureliaFileUtil {
         val name = FileUtil.getNameWithoutExtension(hostFile.name)
 
         val controllerFile = directory.findFile("$name.ts") ?: directory.findFile("$name.js")
-        return PsiTreeUtil.findChildOfType(controllerFile, JSClass::class.java)
+        val candidates = PsiTreeUtil.findChildrenOfType(controllerFile, JSClass::class.java)
+        candidates.firstOrNull{ AureliaIndexUtil.isCustomElementClass(it) }?.let { return it }
+        candidates.firstOrNull{ it.isExported }?.let { return it }
+        return candidates.firstOrNull()
     }
 
     fun findViewOfControllerFile(hostFile: PsiFile): XmlFile? {

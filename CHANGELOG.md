@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed resolving of controller class references when the controller class is not the first class in a file
+
 ## [2.1.0] - 2025-07-14
 
 ### Changed
