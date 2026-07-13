@@ -2,6 +2,37 @@
     <name>AureliaStorm Community</name>
     <id>AureliaStormCommunity</id>
     <vendor email="rustaddicts@gmail.com" url="https://github.com/CollinHerber/AureliaStorm">Collin Herber</vendor>
+	<description><![CDATA[
+This plugin brings improved support for [Aurelia Framework](https://aurelia.io) to
+the [IntelliJ platform](https://www.jetbrains.com/products.html?fromMenu#lang=js&type=ide)
+
+> Plugin Supports Aurelia 1.x and 2.x
+
+![](https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif)
+
+
+[Report an issue](https://github.com/CollinHerber/AureliaStorm/issues) | [GitHub](https://github.com/CollinHerber/AureliaStorm) | [JetBrains](https://plugins.jetbrains.com/plugin/21949-aureliastorm-community)
+
+Either `aurelia`(v2) or `aurelia-cli`,`aurelia-framework`(v1) must be present in the project npm dependencies
+
+### Custom elements & attributes
+
+* Declaration resolving using `@customElement` and `@customAttribute` annotation or class names
+* Custom element property recognition (`@bindable` annotation)
+* Require and import tag reference detection for typescript files
+* Component and property navigation (ctrl+click)
+* Component lifecycle hooks (like `attached`, `detached`)
+* Detecting bindable HTML attributes and events (such as `class.bind` or `click.delegate`)
+* Custom element/attribute and property suggestions (ctrl+space)
+* GoTo HTML/ts file action when in same folder (Default Alt+Ctrl+Shift+O)
+
+### Insight for bindings and interpolation
+
+* Can be enabled/disabled in the **plugin settings** (ony works with public members and can sometimes resolve references wrong)
+* Code insight for `${}` and binding attribute values
+* Controller properties completion and navigation
+* `$this`, `$parent`, `$index`, `$event` support
+]]></description>
 
     <depends>com.intellij.modules.lang</depends>
     <depends>JavaScript</depends>
