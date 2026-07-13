@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Improved aurelia project detection
+
 ## [2.1.1] - 2025-07-25
 
 ### Fixed

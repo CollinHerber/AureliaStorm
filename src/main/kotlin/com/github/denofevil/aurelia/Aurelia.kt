@@ -133,6 +133,6 @@ object Aurelia {
 
     private fun hasPackageJsonAureliaDependencies(virtualFile: VirtualFile): Boolean {
         val data = PackageJsonData.getOrCreate(virtualFile)
-        return data.allDependencies.any{it.startsWith("aurelia")}
+        return data.allDependencies.any{it.startsWith("aurelia") }
     }
 }
