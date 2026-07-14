@@ -3,35 +3,25 @@
     <id>AureliaStormCommunity</id>
     <vendor email="rustaddicts@gmail.com" url="https://github.com/CollinHerber/AureliaStorm">Collin Herber</vendor>
 	<description><![CDATA[
-This plugin brings improved support for [Aurelia Framework](https://aurelia.io) to
-the [IntelliJ platform](https://www.jetbrains.com/products.html?fromMenu#lang=js&type=ide)
+	<p>This plugin brings improved support for <a href="https://aurelia.io">Aurelia Framework</a> to
+the <a href="https://www.jetbrains.com/products.html?fromMenu#lang=js&amp;type=ide">IntelliJ platform</a></p>
 
-> Plugin Supports Aurelia 1.x and 2.x
+<blockquote><p>Plugin Supports Aurelia 1.x and 2.x</p></blockquote>
 
-![](https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif)
+<p><img src="https://raw.githubusercontent.com/CollinHerber/AureliaStorm/master/plugin-demo.gif" alt="" /></p>
 
 
-[Report an issue](https://github.com/CollinHerber/AureliaStorm/issues) | [GitHub](https://github.com/CollinHerber/AureliaStorm) | [JetBrains](https://plugins.jetbrains.com/plugin/21949-aureliastorm-community)
+<p><a href="https://github.com/CollinHerber/AureliaStorm/issues">Report an issue</a> | <a href="https://github.com/CollinHerber/AureliaStorm">GitHub</a> | <a href="https://plugins.jetbrains.com/plugin/21949-aureliastorm-community">JetBrains</a></p>
 
-Either `aurelia`(v2) or `aurelia-cli`,`aurelia-framework`(v1) must be present in the project npm dependencies
+<p>Either <code>aurelia</code>(v2) or <code>aurelia-cli</code>,<code>aurelia-framework</code>(v1) must be present in the project npm dependencies</p>
 
-### Custom elements & attributes
+<h3>Custom elements &amp; attributes</h3>
 
-* Declaration resolving using `@customElement` and `@customAttribute` annotation or class names
-* Custom element property recognition (`@bindable` annotation)
-* Require and import tag reference detection for typescript files
-* Component and property navigation (ctrl+click)
-* Component lifecycle hooks (like `attached`, `detached`)
-* Detecting bindable HTML attributes and events (such as `class.bind` or `click.delegate`)
-* Custom element/attribute and property suggestions (ctrl+space)
-* GoTo HTML/ts file action when in same folder (Default Alt+Ctrl+Shift+O)
+<ul><li>Declaration resolving using <code>@customElement</code> and <code>@customAttribute</code> annotation or class names</li><li>Custom element property recognition (<code>@bindable</code> annotation)</li><li>Require and import tag reference detection for typescript files</li><li>Component and property navigation (ctrl+click)</li><li>Component lifecycle hooks (like <code>attached</code>, <code>detached</code>)</li><li>Detecting bindable HTML attributes and events (such as <code>class.bind</code> or <code>click.delegate</code>)</li><li>Custom element/attribute and property suggestions (ctrl+space)</li><li>GoTo HTML/ts file action when in same folder (Default Alt+Ctrl+Shift+O)</li></ul>
 
-### Insight for bindings and interpolation
+<h3>Insight for bindings and interpolation</h3>
 
-* Can be enabled/disabled in the **plugin settings** (ony works with public members and can sometimes resolve references wrong)
-* Code insight for `${}` and binding attribute values
-* Controller properties completion and navigation
-* `$this`, `$parent`, `$index`, `$event` support
+<ul><li>Can be enabled/disabled in the <strong>plugin settings</strong> (ony works with public members and can sometimes resolve references wrong)</li><li>Code insight for <code>${}</code> and binding attribute values</li><li>Controller properties completion and navigation</li><li><code>$this</code>, <code>$parent</code>, <code>$index</code>, <code>$event</code> support</li></ul>
 ]]></description>
 
     <depends>com.intellij.modules.lang</depends>
